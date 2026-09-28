@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Siswa - Form Input</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 480px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #444;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1.5px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+            outline: none;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            border-color: #007bff;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            padding-top: 5px;
+        }
+
+        .radio-group label {
+            font-weight: normal;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Biodata Siswa</h2>
+
+        <form id="formBiodata">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" placeholder="Masukkan nama..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="alamat">Alamat</label>
+                <input type="text" id="alamat" placeholder="Masukkan alamat..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="jurusan">Jurusan</label>
+                <select id="jurusan">
+                    <option value="RPL">RPL</option>
+                    <option value="TEI">TEI</option>
+                    <option value="TKJ">TKJ</option>
+                    <option value="TKR">TKR</option>
+                    <option value="TSM">TSM</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Jenis Kelamin</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="jk" value="L" checked> L</label>
+                    <label><input type="radio" name="jk" value="P"> P</label>
+                    <label><input type="radio" name="jk" value="B"> B</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="tinggi">Tinggi Badan (cm)</label>
+                <input type="number" id="tinggi" placeholder="Contoh: 170">
+            </div>
+
+            <div class="form-group">
+                <label for="berat">Berat Badan (kg)</label>
+                <input type="number" id="berat" placeholder="Contoh: 60">
+            </div>
+
+            <div class="form-group">
+                <label for="golDarah">Golongan Darah</label>
+                <select id="golDarah">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="AB">AB</option>
+                    <option value="O">O</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="hobi">Hobi</label>
+                <input type="text" id="hobi" placeholder="Masukkan hobi...">
+            </div>
+
+            <div class="form-group">
+                <label for="hp">Nomor HP</label>
+                <input type="text" id="hp" placeholder="08xxxxxxxxxx">
+            </div>
+
+            <button type="submit">Simpan & Pindah Halaman</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('formBiodata').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const dataBiodata = {
+                nama: document.getElementById('nama').value,
+                alamat: document.getElementById('alamat').value,
+                jurusan: document.getElementById('jurusan').value,
+                jk: document.querySelector('input[name="jk"]:checked').value,
+                tinggi: document.getElementById('tinggi').value,
+                berat: document.getElementById('berat').value,
+                golDarah: document.getElementById('golDarah').value,
+                hobi: document.getElementById('hobi').value,
+                hp: document.getElementById('hp').value
+            };
+
+            localStorage.setItem('biodataSiswa', JSON.stringify(dataBiodata));
+            window.location.href = "10rpl3_hasill.html";
+        });
+    </script>
+
+</body>
+</html>
