@@ -1,0 +1,220 @@
+/* =========================
+   PENGATURAN DASAR
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    /* Warna background */
+    background-color: #a9d9e8;
+
+    /* Font */
+    font-family: Arial, sans-serif;
+
+    /* Membuat kartu berada di tengah */
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   KARTU UTAMA
+========================= */
+
+.card {
+
+    width: 320px;
+
+    background-color: white;
+
+    border: 3px solid #333;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow: 8px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+
+    background-color: #ef8066;
+
+    text-align: center;
+
+    padding: 30px 20px 25px;
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+.foto {
+
+    width: 100px;
+
+    height: 100px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid white;
+
+    display: block;
+
+    margin: auto;
+
+    background-color: #246aa5;
+}
+
+
+/* =========================
+   NAMA
+========================= */
+
+.header h1 {
+
+    margin-top: 15px;
+
+    font-size: 22px;
+
+    color: #333;
+}
+
+
+.header p {
+
+    margin-top: 5px;
+
+    color: #555;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+
+    padding: 25px 20px;
+
+    text-align: center;
+}
+
+
+.bio {
+
+    color: #555;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   TOMBOL SOSMED
+========================= */
+
+.button {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 12px;
+
+    background-color: #8acde2;
+
+    color: #222;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    border: 2px solid #333;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+
+/* Saat mouse diarahkan */
+.button:hover {
+
+    background-color: #ef8066;
+
+    color: white;
+
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+
+    width: 35px;
+
+    height: 35px;
+
+    border: 2px solid #ef8066;
+
+    border-radius: 50%;
+
+    margin: 20px auto 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #ef8066;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   HP / MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .card {
+
+        width: 100%;
+
+        max-width: 320px;
+    }
+
+}
