@@ -21,18 +21,18 @@ body {
     background:
         radial-gradient(
             circle at top left,
-            #ffd6e5,
+            #f9a8d4,
             transparent 35%
         ),
         radial-gradient(
             circle at bottom right,
-            #ffb3ca,
-            transparent 35%
+            #c084fc,
+            transparent 40%
         ),
         linear-gradient(
             135deg,
-            #ff8fab,
-            #ffc2d1
+            #f472b6,
+            #a855f7
         );
 
     display: flex;
@@ -56,23 +56,25 @@ body {
 
     padding: 35px 25px;
 
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 2px solid rgba(255, 255, 255, 0.7);
 
     border-radius: 30px;
 
     text-align: center;
 
     box-shadow:
-        0 20px 50px rgba(180, 40, 90, 0.25);
+        0 20px 50px rgba(91, 33, 182, 0.3);
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
 
     animation: muncul 0.8s ease;
 }
 
 
 /* =========================
-   FOTO
+   FOTO PROFIL
 ========================= */
 
 .profile {
@@ -88,13 +90,13 @@ body {
 
     background: linear-gradient(
         135deg,
-        #ff477e,
-        #ff85a1,
-        #ffc2d1
+        #ec4899,
+        #a855f7,
+        #7c3aed
     );
 
     box-shadow:
-        0 8px 25px rgba(220, 50, 100, 0.3);
+        0 8px 25px rgba(168, 85, 247, 0.4);
 }
 
 .profile img {
@@ -115,7 +117,7 @@ body {
 ========================= */
 
 h1 {
-    color: #9d174d;
+    color: #7e22ce;
 
     font-size: 28px;
 
@@ -130,7 +132,7 @@ h1 {
 ========================= */
 
 .username {
-    color: #d14d78;
+    color: #db2777;
 
     font-size: 14px;
 
@@ -143,7 +145,7 @@ h1 {
 ========================= */
 
 .description {
-    color: #76515f;
+    color: #6b21a8;
 
     font-size: 14px;
 
@@ -167,7 +169,7 @@ h1 {
 
 
 /* =========================
-   TOMBOL
+   TOMBOL SOSMED
 ========================= */
 
 .social {
@@ -185,8 +187,8 @@ h1 {
 
     background: linear-gradient(
         135deg,
-        #ff5c8a,
-        #ff789d
+        #ec4899,
+        #a855f7
     );
 
     border-radius: 16px;
@@ -196,7 +198,7 @@ h1 {
     text-decoration: none;
 
     box-shadow:
-        0 7px 18px rgba(220, 60, 110, 0.2);
+        0 7px 18px rgba(168, 85, 247, 0.3);
 
     transition: all 0.3s ease;
 }
@@ -213,7 +215,7 @@ h1 {
 }
 
 
-/* Nama sosial media */
+/* Nama */
 
 .social p {
     width: 100%;
@@ -239,19 +241,21 @@ h1 {
 }
 
 
-/* Hover */
+/* =========================
+   HOVER
+========================= */
 
 .social:hover {
     transform: translateY(-4px);
 
     background: linear-gradient(
         135deg,
-        #e83e70,
-        #ff5c8a
+        #db2777,
+        #7c3aed
     );
 
     box-shadow:
-        0 12px 25px rgba(220, 60, 110, 0.3);
+        0 12px 28px rgba(126, 34, 206, 0.4);
 }
 
 
@@ -262,7 +266,7 @@ h1 {
 footer {
     margin-top: 25px;
 
-    color: #b45b7b;
+    color: #9333ea;
 
     font-size: 12px;
 }
